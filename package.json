@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js",
-    "start:production": "node app.js",
-    "start:dev": "NODE_ENV=dev nodemon app.js",
-    "start:test": "NODE_ENV=test nodemon app.js"
+    "start": "nodemon project.js",
+    "start:production": "node project.js",
+    "start:dev": "NODE_ENV=dev project.js",
+    "start:test": "NODE_ENV=test nodemon project.js"
   },
   "repository": {
     "type": "git",
