@@ -1,6 +1,7 @@
 {
     "dev":{
-        "connectionString":"postgresql://postgres:docker@127.0.0.1:5432/bms"
+        "connectionString":"postgresql://postgres:docker@127.0.0.1:5432/bms",
+        "port": "3000" 
     },
     "test":{
         "connectionString":"127.123.123.234:5432"

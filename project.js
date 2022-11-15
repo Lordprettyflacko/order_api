@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+// const port = 3000;
 let cors = require("cors");
 app.use(cors());
 app.use(express.json());
-
+console.log("hello =" + process.env.NODE_ENV );
 const { Client } = require('pg');
 const config = require('./config.json')[process.env.NODE_ENV || "dev"]
-
+const port = config.port;
 
 const client = new Client({
     connectionString: config.connectionString
