@@ -1,6 +1,21 @@
 import { employeeCard, storeCard } from "./component.js";
 const $container = $("#container");
 const $display = $("#display");
+const ENV = "production";
+const config = require("./config")[process.env.NODE_ENV || "dev"]
+const express = require('express');
+const PORT = config.port;
+
+const app = express();
+
+app.use(express.static('public'))
+
+app.listen(PORT, () => {
+    console.log(`your front end server that serves up static files, is listening on ${PORT}`);
+})
+//const ENV = "dev";
+
+let ApiUrl = ENV == "dev" ? "http://localhost:3000" : "https://front-end-nq0x.onrender.com";
 
 //create function to clear page
 function clear() {
