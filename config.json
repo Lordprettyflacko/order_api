@@ -1,0 +1,12 @@
+{
+    "dev":{
+        "connectionString":"postgresql://postgres:docker@127.0.0.1:5432/bms"
+    },
+    "test":{
+        "connectionString":"127.123.123.234:5432"
+    },
+    "production":{
+        "connectionString": "process.env.POSTGRES_CONNECTION_STRING",
+        "port": "process.env.PORT"
+    }
+}
