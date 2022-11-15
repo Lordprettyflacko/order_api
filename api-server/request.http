@@ -1,0 +1,33 @@
+
+### GET all stores
+GET http://127.0.0.1:3000/api/store
+
+### GET all stores by id
+GET http://127.0.0.1:3000/api/store/1
+
+### GET all employees
+GET http://127.0.0.1:3000/api/employee
+
+### GET a employee by store id
+GET http://127.0.0.1:3000/api/employee/2
+
+### CREATE a new store
+POST http://127.0.0.1:3000/api/store
+Content-Type: application/json
+
+{"name":"McDonalds","location":"Irvine"}
+
+### CREATE a new employee
+POST http://127.0.0.1:3000/api/employee
+Content-Type: application/json
+
+{"name":"steven","position":"clerk","full_or_part":"parttime","store_id":1}
+
+### DELETE an employee by id
+DELETE http://127.0.0.1:3000/api/bms/5
+
+### PATCH a new employee
+PATCH http://127.0.0.1:3000/api/bms/4
+Content-Type: application/json
+
+{"name":"steven","position":"clerk","fulltime_or_parttime":"parttime", "store_id":1};
